@@ -122,12 +122,6 @@ runs:
         echo "SETUP_FILE=${setup_file}" >> $GITHUB_ENV
         echo "SETUP_OPT=${setup_opt}" >> $GITHUB_ENV
 
-    - name: Cache Python packages
-      uses: actions/cache@v4
-      with:
-        path: ${{ env.PIP_CACHE_PATH }}
-        key: pip-${{ runner.os }}-${{ hashFiles('zephyr/scripts/requirements*.txt') }}
-
     - name: Install Python packages
       shell: bash
       run: |
