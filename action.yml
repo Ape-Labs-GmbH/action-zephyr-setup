@@ -154,4 +154,4 @@ runs:
         # if [ ! -d sysroots ]; then
         #     ${SETUP_FILE} ${SETUP_OPT}h
         # fi
-        ${SETUP_FILE} ${SETUP_OPT}ct
+        ${SETUP_FILE} -c -t
