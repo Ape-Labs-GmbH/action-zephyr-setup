@@ -149,9 +149,9 @@ runs:
         IFS=":"
         TOOLCHAINS="${{ inputs.toolchains }}"
         for toolchain in $TOOLCHAINS; do
-            ${SETUP_FILE} ${SETUP_OPT}t $toolchain
+            ${SETUP_FILE} ${SETUP_OPT}t
         done
-        if [ ! -d sysroots ]; then
-            ${SETUP_FILE} ${SETUP_OPT}h
-        fi
+        # if [ ! -d sysroots ]; then
+        #     ${SETUP_FILE} ${SETUP_OPT}h
+        # fi
         ${SETUP_FILE} ${SETUP_OPT}c
