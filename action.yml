@@ -122,11 +122,6 @@ runs:
         echo "SETUP_FILE=${setup_file}" >> $GITHUB_ENV
         echo "SETUP_OPT=${setup_opt}" >> $GITHUB_ENV
 
-    - name: Install Python packages
-      shell: bash
-      run: |
-        pip3 install -r zephyr/scripts/requirements.txt
-
     - name: Cache Zephyr SDK
       id: cache-toolchain
       uses: actions/cache@v4
