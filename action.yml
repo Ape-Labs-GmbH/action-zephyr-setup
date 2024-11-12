@@ -147,11 +147,11 @@ runs:
       shell: bash
       run: |
         IFS=":"
-        TOOLCHAINS="${{ inputs.toolchains }}"
-        for toolchain in $TOOLCHAINS; do
-            ${SETUP_FILE} ${SETUP_OPT}t
-        done
+        # TOOLCHAINS="${{ inputs.toolchains }}"
+        # for toolchain in $TOOLCHAINS; do
+        #     ${SETUP_FILE} ${SETUP_OPT}t
+        # done
         # if [ ! -d sysroots ]; then
         #     ${SETUP_FILE} ${SETUP_OPT}h
         # fi
-        ${SETUP_FILE} ${SETUP_OPT}c
+        ${SETUP_FILE} ${SETUP_OPT}ct
